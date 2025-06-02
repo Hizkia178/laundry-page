@@ -86,15 +86,15 @@ const Service = () => {
                 </div>
 
           
-                <div className="row g-4 mb-5">
+                <div className="row g-4 mb-5" data-aos-duration="1000" data-aos="fade-up">
                     {services.map((service, index) => (
                         <div key={service.id} className="col-12 col-md-6 col-lg-4" 
                              data-aos="fade-up" 
                              data-aos-delay={index * 100}>
                             <div 
                                 className={`card h-100 border-0 shadow ${
-                                    hoveredCard === service.id ? 'shadow-lg' : 'shadow'
-                                }`}
+                                    hoveredCard === service.id ? 'shadow' : 'shadow'
+                                }`} data-aos-duration="1000"
                                 style={{ 
                                     transition: 'all 0.3s ease',
                                     transform: hoveredCard === service.id ? 'translateY(-5px)' : 'translateY(0)'

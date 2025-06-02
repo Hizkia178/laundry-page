@@ -1,0 +1,144 @@
+const Footer = () => {
+    const today = new Date();
+    const tanggalLengkap = today.toLocaleDateString('id-ID', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    });
+    return (
+        <>
+            <footer className="overflow-hidden shadow" style={{
+                background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
+                color: '#e0e0e0',
+                borderTop: '3px solid #0f3460'
+            }}>
+                <div className="container py-5">
+                    <div className="row g-4">
+                        <div className="col-lg-4 col-md-6">
+                            <div className="d-flex align-items-center mb-4">
+                                <i className="bx bx-crown fs-1 me-1"></i>
+                                <h4 className="mb-0 fw-bold text-white">Laundry Kilat</h4>
+                            </div>
+                            <p className="mb-4 text-light" style={{ lineHeight: '1.6' }}>
+                                Tingkatkan kenyamanan hidup Anda dengan layanan Laundry Kilat kami.
+                                Cuci cepat, antar-jemput gratis, dan hasil wangi bersih seperti baru—semua dalam genggaman Anda.
+                            </p>
+                            <div className="d-flex gap-3">
+                                {['facebook-circle', 'instagram', 'twitter', 'linkedin'].map((platform) => (
+                                    <a key={platform} href="#" className="fs-4 text-light">
+                                        <i className={`bx bxl-${platform}`}></i>
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="col-lg-2 col-md-6">
+                            <h5 className="mb-4 fw-bold" style={{ color: '#ffffff', borderBottom: '2px solid #00a8ff', paddingBottom: '8px' }}>
+                                <i className='bx bx-link me-2' style={{ color: '#00a8ff' }}></i>Quick Links
+                            </h5>
+                            <ul className="list-unstyled">
+                                {[
+                                    { icon: 'home-alt', text: 'Home' },
+                                    { icon: 'dollar-circle', text: 'Income' },
+                                    { icon: 'receipt', text: 'Expenses' },
+                                    { icon: 'bar-chart-alt-2', text: 'Reports' }
+                                ].map((link, index) => (
+                                    <li key={index} className="mb-3">
+                                        <a href="#" className="text-decoration-none text-light">
+                                            <i className={`bx bx-${link.icon} me-2`}></i>{link.text}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div className="col-lg-2 col-md-6">
+                            <h5 className="mb-4 fw-bold text-white" style={{ borderBottom: '2px solid #00a8ff', paddingBottom: '8px' }}>
+                                <i className='bx bx-star me-2' style={{ color: '#00a8ff' }}></i>Features
+                            </h5>
+                            <ul className="list-unstyled">
+                                {[
+                                    { icon: 'pie-chart-alt', text: 'Budget Planning' },
+                                    { icon: 'trending-up', text: 'Financial Goals' },
+                                    { icon: 'bell', text: 'Notifications' },
+                                    { icon: 'shield', text: 'Secure Data' }
+                                ].map((feature, index) => (
+                                    <li key={index} className="mb-3">
+                                        <a href="#" className="text-decoration-none text-light">
+                                            <i className={`bx bx-${feature.icon} me-2`}></i>{feature.text}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div className="col-lg-2 col-md-6">
+                            <h5 className="mb-4 fw-bold text-white" style={{ borderBottom: '2px solid #00a8ff', paddingBottom: '8px' }}>
+                                <i className='bx bx-support me-2' style={{ color: '#00a8ff' }}></i>Support
+                            </h5>
+                            <ul className="list-unstyled">
+                                {[
+                                    { icon: 'help-circle', text: 'Help Center' },
+                                    { icon: 'envelope', text: 'Contact Us' },
+                                    { icon: 'file', text: 'Privacy Policy' },
+                                    { icon: 'check-shield', text: 'Terms of Service' }
+                                ].map((support, index) => (
+                                    <li key={index} className="mb-3">
+                                        <i className={`bx bx-${support.icon} me-2`}></i>{support.text}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div className="col-lg-2 col-md-12">
+                            <h5 className="mb-4 fw-bold text-white" style={{ borderBottom: '2px solid #00a8ff', paddingBottom: '8px' }}>
+                                <i className='bx bx-envelope me-2' style={{ color: '#00a8ff' }}></i>Stay Updated
+                            </h5>
+                            <p className="text-light mb-2">
+                                Dapatkan info promo dan layanan terbaru.
+                            </p>
+                            <form className="mb-3 needs-validation">
+                                <input
+                                    type="email"
+                                    className="form-control form-control-sm mb-2"
+                                    placeholder="Email Anda"
+                                    required
+                                    style={{
+                                        backgroundColor: '#1f2a47',
+                                        border: '1px solid #00a8ff',
+                                        color: '#fff',
+                                    }}
+                                />
+                                <div className="invalid-feedback mb-2">
+                                    Mohon masukkan email yang valid
+                                </div>
+                                <button type="submit" className="btn btn-primary btn-sm  shadow w-100">
+                                    <i className="bx bx-send me-1"></i>Langganan
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div className="border-top" style={{ borderColor: '#00a8ff !important' }}>
+                    <div className="container py-4">
+                        <div className="row align-items-center">
+                            <div className="col-md-6 text-md-start text-center">
+                                <p className="mb-0 small">
+                                    Laundry Kilat © {new Date().getFullYear()}. All rights reserved.
+                                </p>
+                            </div>
+                            <div className="col-md-6 text-center text-md-end">
+                                <i className='bx bx-time me-2'></i>
+                                {tanggalLengkap}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </>
+    )
+};
+
+export default Footer;
