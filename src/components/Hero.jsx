@@ -125,44 +125,18 @@ const Hero = () => {
                             ))}
                         </div>
 
-                    
-                        <div className="d-flex align-items-center gap-3 mb-4" data-aos-duration="1000" data-aos-delay="600" data-aos="fade-down">
-                            <div className="d-flex align-items-center gap-2 fw-semibold text-dark">
-                                <i className="bx bx-share-alt"></i>
-                                <span>Ikuti Kami:</span>
-                            </div>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                                className="d-flex align-items-center justify-content-center bg-white rounded-circle text-decoration-none shadow "
-                                style={{ width: '48px', height: '48px' }}>
-                                <i className="bx bxl-instagram fs-4 text-danger"></i>
-                            </a>
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
-                                className="d-flex align-items-center justify-content-center bg-white rounded-circle text-decoration-none shadow "
-                                style={{ width: '48px', height: '48px' }}>
-                                <i className="bx bxl-facebook fs-4 text-primary"></i>
-                            </a>
-                            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer"
-                                className="d-flex align-items-center justify-content-center bg-white rounded-circle text-decoration-none shadow "
-                                style={{ width: '48px', height: '48px' }}>
-                                <i className="bx bxl-whatsapp fs-4 text-success"></i>
-                            </a>
-                            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer"
-                                className="d-flex align-items-center justify-content-center bg-white rounded-circle text-decoration-none shadow "
-                                style={{ width: '48px', height: '48px' }}>
-                                <i className="bx bxl-tiktok fs-4 text-dark"></i>
-                            </a>
-                        </div>
+               
 
                       
                         <div className="d-flex flex-wrap gap-3" data-aos-duration="1000"  data-aos="fade-up">
-                            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="text-decoration-none" data-aos-delay="600" data-aos="down">
+                            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="text-decoration-none" data-aos-delay="1000" data-aos="fade-down">
                                 <button className="btn btn-success shadow-lg d-flex align-items-center btn-lg">
                                     <i className="bx bxl-whatsapp fs-5"></i>
                                     Hubungi via WhatsApp
                                 </button>
                             </a>
                             <a href="#pricing" className="text-decoration-none">
-                                <button className="btn btn-outline-primary shadow-lg d-flex align-items-center btn-lg">
+                                <button className="btn btn-outline-primary shadow-lg d-flex align-items-center btn-lg" data-aos-delay="900" data-aos="fade-down">
                                     <i className="bx bx-money fs-5"></i>
                                     Lihat Harga
                                 </button>
