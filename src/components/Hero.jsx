@@ -21,7 +21,7 @@ const Hero = () => {
 
     const services = [
         { 
-            icon: "bx-wash", 
+            icon: "bx-basket", 
             title: "Reguler", 
             desc: "Cuci + Setrika", 
             color: "primary",
@@ -116,7 +116,7 @@ const Hero = () => {
                                             <i className={`bx ${service.icon} fs-2 text-${service.color} mb-2`}></i>
                                             <h6 className="card-title fw-bold mb-1">{service.title}</h6>
                                             <p className="card-text small text-muted mb-1">{service.desc}</p>
-                                            <small className={`badge bg-${service.color} bg-opacity-20 text-${service.color}`}>
+                                            <small className={`badge bg-${service.color} bg-opacity-20 text-white ${service.color}`}>
                                                 {service.time}
                                             </small>
                                         </div>
