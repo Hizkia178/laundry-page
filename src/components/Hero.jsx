@@ -90,7 +90,7 @@ const Hero = () => {
                     <div className="col-md-6 mb-4 mb-md-0">
                     
                         <div className="d-flex flex-wrap gap-2" data-aos-duration="1000" data-aos-delay="600" data-aos="fade-up">
-                            <span className="badge bg-primary mb-2 shadow px-3 py-2 fs-6">
+                            <span className="badge bg-primary mb-2 shadow px-3 rounded-pill py-2 fs-6">
                                 <i className="bx bx-crown me-1"></i>
                                 #1 Laundry Pilihan Warga
                             </span>
