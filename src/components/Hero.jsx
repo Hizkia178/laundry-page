@@ -82,7 +82,7 @@ const Hero = () => {
 
 
     return (
-        <section className="py-5 bg-white position-relative overflow-hidden min-vh-100 d-flex align-items-center" data-aos-duration="1200" data-aos="fade-down">
+        <section className="py-5 bg-white position-relative overflow-hidden min-vh-100 d-flex align-items-center" data-aos-duration="1200" data-aos="fade-down" id='hero'>
             
             
             <div className="container" style={{paddingTop: '50px'}}>
