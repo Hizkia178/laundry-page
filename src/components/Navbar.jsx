@@ -30,7 +30,7 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#pricing">
+                            <a className="nav-link" href="#harga">
                                 <i className="bx bx-money me-1"></i>Harga
                             </a>
                         </li>

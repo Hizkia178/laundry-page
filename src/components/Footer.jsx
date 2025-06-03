@@ -130,7 +130,7 @@ const Footer = () => {
                                 </p>
                             </div>
                             <div className="col-md-6 text-center text-md-end">
-                                <i className='bx bx-time me-2'></i>
+                                <i className='bx bx-time me-1'></i>
                                 {tanggalLengkap}
                             </div>
                         </div>
