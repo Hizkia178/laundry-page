@@ -26,7 +26,7 @@ const Footer = () => {
                             </p>
                             <div className="d-flex gap-3">
                                 {['facebook-circle', 'instagram', 'twitter', 'linkedin'].map((platform) => (
-                                    <a key={platform} href="#" className="fs-4 text-light">
+                                    <a key={platform} href="#" className="text-dark bg-white rounded-circle p-2 shadow d-flex align-items-center justify-content-center text-decoration-none">
                                         <i className={`bx bxl-${platform}`}></i>
                                     </a>
                                 ))}
@@ -39,10 +39,10 @@ const Footer = () => {
                             </h5>
                             <ul className="list-unstyled">
                                 {[
-                                    { icon: 'home-alt', text: 'Home' },
-                                    { icon: 'dollar-circle', text: 'Income' },
-                                    { icon: 'receipt', text: 'Expenses' },
-                                    { icon: 'bar-chart-alt-2', text: 'Reports' }
+                                    { icon: 'home-alt', text: 'Beranda' },
+                                    { icon: 'briefcase-alt-2', text: 'Layanan' },
+                                    { icon: 'money', text: 'Harga' },
+                                    { icon: 'chat', text: 'Kontak' }
                                 ].map((link, index) => (
                                     <li key={index} className="mb-3">
                                         <a href="#" className="text-decoration-none text-light">
@@ -59,10 +59,10 @@ const Footer = () => {
                             </h5>
                             <ul className="list-unstyled">
                                 {[
-                                    { icon: 'pie-chart-alt', text: 'Budget Planning' },
-                                    { icon: 'trending-up', text: 'Financial Goals' },
-                                    { icon: 'bell', text: 'Notifications' },
-                                    { icon: 'shield', text: 'Secure Data' }
+                                    { icon: 'home-alt', text: 'Beranda' },
+                                    { icon: 'archive', text: 'Layanan' },
+                                    { icon: 'wallet', text: 'Paket Harga' },
+                                    { icon: 'support', text: 'Bantuan' }
                                 ].map((feature, index) => (
                                     <li key={index} className="mb-3">
                                         <a href="#" className="text-decoration-none text-light">

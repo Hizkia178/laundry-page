@@ -102,7 +102,7 @@ const Hero = () => {
                         </h1>
                         
                    
-                        <p className="lead text-muted mb-4" style={{ minHeight: '60px' }} data-aos-duration="1000" data-aos-delay="400" data-aos="fade-up">
+                        <p className="lead text-dark mb-4" style={{ minHeight: '60px' }} data-aos-duration="1000" data-aos-delay="400" data-aos="fade-up">
                             {typedText}
                             {isTyping && <span className="text-primary">|</span>}
                         </p>

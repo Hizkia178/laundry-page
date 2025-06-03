@@ -101,7 +101,7 @@ const Harga = () => {
     };
 
     return (
-        <section className="py-5 bg-white" id="harga">
+        <section className="py-5 bg-white overflow-hidden" id="harga">
             <div className="container">
                
                 <div className="text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
