@@ -69,7 +69,7 @@ const Navbar = () => {
         <>
             {/* Navbar */}
             <nav
-                className={`navbar navbar-expand-lg fixed-top shadow py-3 transition-all ${isScrolled ? 'bg-white shadow' : 'bg-white'
+                className={`navbar navbar-expand-lg fixed-top shadow py-3 transition-all overflow-hidden ${isScrolled ? 'bg-white shadow' : 'bg-white'
                     }`}
                 data-aos-duration="1000"
                 data-aos="fade-down"
