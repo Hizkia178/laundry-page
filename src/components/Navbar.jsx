@@ -105,8 +105,8 @@ const Navbar = () => {
                                 <li key={item.id} className="nav-item mx-1">
                                     <a
                                         className={`nav-link rounded-pill px-3 py-2 d-flex align-items-center transition-all ${activeSection === item.id
-                                            ? 'active bg-primary text-white shadow'
-                                            : 'text-dark hover-primary'
+                                                ? 'active bg-primary text-white shadow'
+                                                : 'text-dark hover-primary'
                                             }`}
                                         href={`#${item.id}`}
                                         onClick={(e) => {
@@ -242,8 +242,8 @@ const Navbar = () => {
                                     <a
                                         href={`#${item.id}`}
                                         className={`d-flex align-items-center text-decoration-none p-3 rounded transition-all ${activeSection === item.id
-                                            ? 'bg-primary text-white shadow'
-                                            : 'text-dark hover-bg-light'
+                                                ? 'bg-primary text-white shadow'
+                                                : 'text-dark hover-bg-light'
                                             }`}
                                         onClick={(e) => {
                                             e.preventDefault();
@@ -255,10 +255,10 @@ const Navbar = () => {
                                         }}
                                     >
                                         <div className={`me-3 rounded-circle p-2 ${activeSection === item.id
-                                            ? 'bg-white bg-opacity-20'
-                                            : 'bg-primary bg-opacity-10'
+                                                ? 'bg-white bg-opacity-20'
+                                                : 'bg-primary bg-opacity-10'
                                             }`}>
-                                            <i className={`bx ${item.icon} ${activeSection === item.id ? 'text-white' : 'text-primary'
+                                            <i className={`bx ${item.icon} ${activeSection === item.id ? 'text-dark' : 'text-primary'
                                                 }`}></i>
                                         </div>
                                         <div className="flex-grow-1">
@@ -332,7 +332,7 @@ const Navbar = () => {
             <style jsx>{`
                 .hover-primary:hover {
                     background-color: rgba(13, 110, 253, 0.1) !important;
-                    color: # !important;
+                     color: #0d6efd !important;
                 }
                 
                 .hover-bg-light:hover {
