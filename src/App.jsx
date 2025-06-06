@@ -9,7 +9,7 @@ import Gallery from "./components/Galery";
 import Testimonials from "./components/Testimoni";
 import Location from "./components/Location";
 import Faq from "./components/Faq";
-
+import Contact from "./components/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
 function App() {
@@ -26,6 +26,7 @@ function App() {
       <Testimonials />
       <Location />
       <Faq />
+      <Contact />
       <ScrollToTop />
       <Footer />
     </>
