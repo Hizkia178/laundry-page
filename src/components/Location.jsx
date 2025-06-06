@@ -151,7 +151,7 @@ const Location = () => {
 
                 {/* Overlay Info Card */}
                 <div className="position-absolute top-0 end-0" style={{ marginTop: '50px', marginLeft: '0.7rem' }}>
-                  <div className="card border-0 shadow-sm" style={{ width: 'max-content' }}>
+                  <div className="card border-0 shadow" style={{ width: 'max-content' }}>
                     <div className="card-body p-3">
                       <div className="d-flex align-items-center mb-2">
                         <img
