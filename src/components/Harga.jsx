@@ -149,7 +149,7 @@ const Harga = () => {
                                 <div className="btn-group w-100" role="group">
                                     <input
                                         type="radio"
-                                        className="btn-check"
+                                        className="btn-check shadow"
                                         name="planOptions"
                                         id="monthly"
                                         checked={selectedPlan === 'monthly'}

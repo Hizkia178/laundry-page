@@ -6,6 +6,7 @@ import Harga from "./components/Harga";
 import ScrollToTop from "./components/ScrollToTop";
 import Gallery from "./components/Galery";
 import Testimonials from "./components/Testimoni";
+import Location from "./components/Location";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
       <Harga />
       <Gallery />
       <Testimonials />
+      <Location />
       <ScrollToTop />
       <Footer />
     </>
