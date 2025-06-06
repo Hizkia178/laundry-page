@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { initTooltip } from "../functions/Tooltip";
 
 const Footer = () => {
     useEffect(() => {
         initTooltip();
     }, []);
+
+    const [hoveredPlatform, setHoveredPlatform] = useState(null);
 
     const socialLinks = [
         { platform: "facebook-circle", title: "Follow us on Facebook" },
@@ -39,11 +41,17 @@ const Footer = () => {
                                 Cuci cepat, antar-jemput gratis, dan hasil wangi bersih seperti baru—semua dalam genggaman Anda.
                             </p>
                             <div className="d-flex gap-3">
-                                {socialLinks.map(({ platform, title}) => (
-                                    <a 
-                                    key={platform}
-                                    href="#"
-                                    className="text-dark bg-white rounded-circle p-2 shadow d-flex align-items-center justify-content-center text-decoration-none" data-bs-toggle="tooltip" title={title}>
+                                {socialLinks.map(({ platform, title }) => (
+                                    <a
+                                        key={platform}
+                                        href="#"
+                                        className={`rounded-circle p-2 d-flex align-items-center justify-content-center text-decoration-none
+            ${hoveredPlatform === platform ? 'bg-primary text-white shadow-lg' : 'bg-white text-dark shadow'}`}
+                                        data-bs-toggle="tooltip"
+                                        title={title}
+                                        onMouseEnter={() => setHoveredPlatform(platform)}
+                                        onMouseLeave={() => setHoveredPlatform(null)}
+                                    >
                                         <i className={`bx bxl-${platform}`}></i>
                                     </a>
                                 ))}
