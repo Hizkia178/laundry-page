@@ -89,11 +89,10 @@ const Footer = () => {
                   <a
                     key={platform}
                     href="#"
-                    className={`rounded-circle p-2 d-flex align-items-center justify-content-center text-decoration-none ${
-                      hoveredPlatform === platform
+                    className={`rounded-circle p-2 d-flex align-items-center justify-content-center text-decoration-none ${hoveredPlatform === platform
                         ? "bg-primary text-white shadow-lg"
                         : "bg-white text-dark shadow"
-                    }`}
+                      }`}
                     data-bs-toggle="tooltip"
                     title={title}
                     onMouseEnter={() => setHoveredPlatform(platform)}
@@ -174,7 +173,8 @@ const Footer = () => {
             <div className="row align-items-center">
               <div className="col-md-6 text-md-start text-center">
                 <p className="mb-0 small">
-                  Laundry Kilat © {new Date().getFullYear()}. All rights reserved.
+                  Laundry Kilat © {new Date().getFullYear()}. All rights reserved.<br />
+                  Dibangun dengan ❤️ oleh Hizkia Siahaan bersama Claude AI.
                 </p>
               </div>
               <div className="col-md-6 text-center text-md-end">
