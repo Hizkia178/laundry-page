@@ -342,8 +342,8 @@ const Faq = () => {
                                                                     <i className="bx bx-like me-1"></i>
                                                                     Helpful ({faq.helpful})
                                                                 </button>
-                                                                <button className="btn btn-sm btn-outline-primary shadow">
-                                                                    <i className="bx bx-share me-1"></i>
+                                                                <button className="btn btn-sm btn-outline-primary shadow" style={{marginRight:'0.8rem'}}>
+                                                                    <i className="bx bx-share me-2"></i>
                                                                     Share
                                                                 </button>
                                                             </div>
