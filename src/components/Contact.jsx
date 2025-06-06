@@ -178,7 +178,7 @@ const Contact = () => {
     // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         if (!validateForm()) {
             return;
         }
@@ -189,10 +189,10 @@ const Contact = () => {
         try {
             // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 2000));
-            
+
             console.log('Form submitted:', formData);
             setSubmitStatus('success');
-            
+
             // Reset form
             setFormData({
                 name: '',
@@ -204,7 +204,7 @@ const Contact = () => {
                 priority: 'normal',
                 newsletter: false
             });
-            
+
         } catch (error) {
             console.error('Submission error:', error);
             setSubmitStatus('error');
@@ -227,7 +227,7 @@ const Contact = () => {
                             Hubungi Laundry Kilat
                         </h2>
                         <p className="lead text-muted mb-4 col-lg-8 mx-auto">
-                            Punya pertanyaan atau butuh bantuan? Isi form kontak di bawah, dan tim Laundry Kilat 
+                            Punya pertanyaan atau butuh bantuan? Isi form kontak di bawah, dan tim Laundry Kilat
                             siap membantu kamu dengan cepat dan ramah.
                         </p>
                     </div>
@@ -256,25 +256,25 @@ const Contact = () => {
                                 <i className="bx bx-info-circle me-2"></i>
                                 Informasi Kontak
                             </h3>
-                            
+
                             {contactInfo.map((info, index) => (
-                                <div 
+                                <div
                                     key={info.id}
                                     className="card border-0 shadow mb-3"
-                                    style={{ 
+                                    style={{
                                         transition: 'all 0.3s ease',
                                         transform: hoveredCard === info.id ? 'translateY(-3px)' : 'translateY(0)',
                                         boxShadow: hoveredCard === info.id ? '0 10px 30px rgba(0,0,0,0.15)' : ''
                                     }}
                                     onMouseEnter={() => setHoveredCard(info.id)}
                                     onMouseLeave={() => setHoveredCard(null)}
-                                    data-aos="zoom-in" 
+                                    data-aos="zoom-in"
                                     data-aos-delay={400 + (index * 100)}
                                 >
                                     <div className="card-body p-4">
                                         <div className="d-flex align-items-start gap-3">
                                             <div className={`rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 ${info.iconColor} bg-light shadow`}
-                                                 style={{ width: '50px', height: '50px' }}>
+                                                style={{ width: '50px', height: '50px' }}>
                                                 <i className={`bx ${info.icon} fs-4`}></i>
                                             </div>
                                             <div className="flex-grow-1">
@@ -291,7 +291,7 @@ const Contact = () => {
                                 </div>
                             ))}
 
-                        
+
                         </div>
                     </div>
 
@@ -307,7 +307,7 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                              
+
                                 {submitStatus === 'success' && (
                                     <div className="alert alert-success d-flex align-items-center shadow" role="alert">
                                         <i className="bx bx-check-circle fs-4 me-2"></i>
@@ -470,7 +470,7 @@ const Contact = () => {
                                                         id="priorityLow"
                                                     />
                                                     <label className="form-check-label" htmlFor="priorityLow">
-                                                        <span className="badge bg-success me-1">LOW</span> Normal
+                                                        <span className="badge bg-success shadow me-1">LOW</span> Normal
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
@@ -484,7 +484,7 @@ const Contact = () => {
                                                         id="priorityNormal"
                                                     />
                                                     <label className="form-check-label" htmlFor="priorityNormal">
-                                                        <span className="badge bg-warning me-1">NORMAL</span> Standar
+                                                        <span className="badge bg-warning shadow me-1">NORMAL</span> Standar
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
@@ -498,7 +498,7 @@ const Contact = () => {
                                                         id="priorityHigh"
                                                     />
                                                     <label className="form-check-label" htmlFor="priorityHigh">
-                                                        <span className="badge bg-danger me-1">HIGH</span> Urgent
+                                                        <span className="badge bg-danger shadow me-1">HIGH</span> Urgent
                                                     </label>
                                                 </div>
                                             </div>
@@ -579,7 +579,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-            
+
             </div>
         </section>
     );
