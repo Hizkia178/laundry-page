@@ -1,4 +1,18 @@
+import { useEffect } from "react";
+import { initTooltip } from "../functions/Tooltip";
+
 const Footer = () => {
+    useEffect(() => {
+        initTooltip();
+    }, []);
+
+    const socialLinks = [
+        { platform: "facebook-circle", title: "Follow us on Facebook" },
+        { platform: "instagram", title: "Follow us on Instagram" },
+        { platform: "twitter", title: "Follow us on Twitter" },
+        { platform: "linkedin", title: "Connect on LinkedIn" },
+    ];
+
     const today = new Date();
     const tanggalLengkap = today.toLocaleDateString('id-ID', {
         weekday: 'long',
@@ -25,8 +39,11 @@ const Footer = () => {
                                 Cuci cepat, antar-jemput gratis, dan hasil wangi bersih seperti baru—semua dalam genggaman Anda.
                             </p>
                             <div className="d-flex gap-3">
-                                {['facebook-circle', 'instagram', 'twitter', 'linkedin'].map((platform) => (
-                                    <a key={platform} href="#" className="text-dark bg-white rounded-circle p-2 shadow d-flex align-items-center justify-content-center text-decoration-none">
+                                {socialLinks.map(({ platform, title}) => (
+                                    <a 
+                                    key={platform}
+                                    href="#"
+                                    className="text-dark bg-white rounded-circle p-2 shadow d-flex align-items-center justify-content-center text-decoration-none" data-bs-toggle="tooltip" title={title}>
                                         <i className={`bx bxl-${platform}`}></i>
                                     </a>
                                 ))}
@@ -113,7 +130,7 @@ const Footer = () => {
                                 <div className="invalid-feedback mb-2">
                                     Mohon masukkan email yang valid
                                 </div>
-                                <button type="submit" className="btn btn-primary btn-sm  shadow w-100">
+                                <button type="submit" className="btn btn-primary btn-sm  shadow w-100" data-bs-toggle="tooltip" title="Langganan">
                                     <i className="bx bx-send me-1"></i>Langganan
                                 </button>
                             </form>

@@ -1,6 +1,9 @@
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
+import { initTooltip } from '../functions/Tooltip';
 const Gallery = () => {
+    useEffect(() => {
+        initTooltip();
+    }, []);
     const [activeTab, setActiveTab] = useState('sepatu');
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -106,7 +109,7 @@ const Gallery = () => {
                                 Galeri Before-After
                             </h2>
                             <p className="lead text-muted mb-4">
-                                Lihat transformasi luar biasa dari layanan laundry kami. Dari kondisi kotor dan kusam 
+                                Lihat transformasi luar biasa dari layanan laundry kami. Dari kondisi kotor dan kusam
                                 menjadi bersih, wangi, dan seperti baru kembali.
                             </p>
 
@@ -117,12 +120,11 @@ const Gallery = () => {
                                     {categories.map((category) => (
                                         <button
                                             key={category.id}
-                                            className={`badge border-0 shadow rounded px-3 py-2 fs-6 d-inline-flex align-items-center transition-all ${
-                                                activeTab === category.id 
-                                                    ? `bg-${category.color} text-white` 
+                                            className={`badge border-0 shadow rounded px-3 py-2 fs-6 d-inline-flex align-items-center transition-all ${activeTab === category.id
+                                                    ? `bg-${category.color} text-white`
                                                     : 'bg-light text-muted'
-                                            }`}
-                                            style={{ 
+                                                }`}
+                                            style={{
                                                 cursor: 'pointer',
                                                 transition: 'all 0.3s ease',
                                                 transform: activeTab === category.id ? 'scale(1.05)' : 'scale(1)'
@@ -157,11 +159,11 @@ const Gallery = () => {
 
                             {/* CTA Button */}
                             <div className="d-flex gap-3">
-                                <button className="btn btn-primary btn-lg shadow px-4">
+                                <button className="btn btn-primary btn-lg shadow px-4" data-bs-toggle="tooltip" title='Hubungi Kami'>
                                     <i className="bx bx-phone me-2"></i>
                                     Hubungi Kami
                                 </button>
-                                <button className="btn btn-outline-primary shadow btn-lg px-4">
+                                <button className="btn btn-outline-primary shadow btn-lg px-4" data-bs-toggle="tooltip" title='Info Lengkap'>
                                     <i className="bx bx-info-circle me-2"></i>
                                     Info Lengkap
                                 </button>
@@ -174,14 +176,14 @@ const Gallery = () => {
                         <div className="position-relative" data-aos="fade-left" data-aos-duration="1000">
                             {/* Carousel Container */}
                             <div className="card border-0 shadow-lg overflow-hidden rounded-4">
-                                <div className="card-header bg-gradient text-white text-center py-3" 
-                                     style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+                                <div className="card-header bg-gradient text-white text-center py-3"
+                                    style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
                                     <h5 className="fw-bold mb-0">
                                         <i className="bx bx-images me-2"></i>
                                         {categories.find(cat => cat.id === activeTab)?.name} - Before & After
                                     </h5>
                                 </div>
-                                
+
                                 <div className="card-body p-0">
                                     {currentGallery && currentGallery.length > 0 && (
                                         <div className="position-relative">
@@ -189,8 +191,8 @@ const Gallery = () => {
                                             <div className="row g-0">
                                                 <div className="col-6 position-relative">
                                                     <div className="position-relative">
-                                                        <img 
-                                                            src={currentGallery[currentSlide].before} 
+                                                        <img
+                                                            src={currentGallery[currentSlide].before}
                                                             alt="Before"
                                                             className="w-100"
                                                             style={{ height: '300px', objectFit: 'cover' }}
@@ -205,8 +207,8 @@ const Gallery = () => {
                                                 </div>
                                                 <div className="col-6 position-relative">
                                                     <div className="position-relative">
-                                                        <img 
-                                                            src={currentGallery[currentSlide].after} 
+                                                        <img
+                                                            src={currentGallery[currentSlide].after}
                                                             alt="After"
                                                             className="w-100"
                                                             style={{ height: '300px', objectFit: 'cover' }}
@@ -222,14 +224,14 @@ const Gallery = () => {
                                             </div>
 
                                             {/* Navigation Arrows */}
-                                            <button 
+                                            <button
                                                 className="position-absolute top-50 start-0 translate-middle-y btn btn-light btn-sm rounded-circle shadow ms-2"
                                                 style={{ width: '40px', height: '40px', zIndex: 10 }}
                                                 onClick={prevSlide}
                                             >
                                                 <i className="bx bx-chevron-left"></i>
                                             </button>
-                                            <button 
+                                            <button
                                                 className="position-absolute top-50 end-0 translate-middle-y btn btn-light btn-sm rounded-circle shadow me-2"
                                                 style={{ width: '40px', height: '40px', zIndex: 10 }}
                                                 onClick={nextSlide}
@@ -243,15 +245,14 @@ const Gallery = () => {
                                     <div className="p-4 bg-light">
                                         <h6 className="fw-bold mb-2">{currentGallery[currentSlide]?.title}</h6>
                                         <p className="text-muted mb-3 small">{currentGallery[currentSlide]?.description}</p>
-                                        
+
                                         {/* Dots Indicator */}
                                         <div className="d-flex justify-content-center gap-2">
                                             {currentGallery.map((_, index) => (
                                                 <button
                                                     key={index}
-                                                    className={`btn btn-sm rounded-circle ${
-                                                        index === currentSlide ? 'btn-primary' : 'btn-outline-secondary'
-                                                    }`}
+                                                    className={`btn btn-sm rounded-circle ${index === currentSlide ? 'btn-primary' : 'btn-outline-secondary'
+                                                        }`}
                                                     style={{ width: '10px', height: '10px', padding: 0 }}
                                                     onClick={() => setCurrentSlide(index)}
                                                 ></button>
@@ -261,7 +262,7 @@ const Gallery = () => {
                                 </div>
                             </div>
 
-                         
+
                         </div>
                     </div>
                 </div>

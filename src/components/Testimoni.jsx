@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import { initTooltip } from '../functions/Tooltip';
 const Testimonials = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [activeFilter, setActiveFilter] = useState('all');
@@ -104,6 +104,7 @@ const Testimonials = () => {
 
     // Auto-play carousel
     useEffect(() => {
+        initTooltip();
         if (!isAutoPlaying) return;
 
         const interval = setInterval(() => {
@@ -222,14 +223,14 @@ const Testimonials = () => {
 
                         <div className="d-flex gap-2">
                             <button
-                                className="btn btn-outline-primary shadow btn-sm rounded-circle"
+                                className="btn btn-outline-primary shadow btn-sm rounded-circle" data-bs-toggle="tooltip" title='Prev'
                                 onClick={prevSlide}
                                 style={{ width: '40px', height: '40px' }}
                             >
                                 <i className="bx bx-chevron-left"></i>
                             </button>
                             <button
-                                className="btn btn-outline-primary shadow btn-sm rounded-circle"
+                                className="btn btn-outline-primary shadow btn-sm rounded-circle" data-bs-toggle="tooltip" title='Next'
                                 onClick={nextSlide}
                                 style={{ width: '40px', height: '40px' }}
                             >
@@ -307,11 +308,11 @@ const Testimonials = () => {
                                             {/* Card Footer */}
                                             <div className="card-footer bg-light border-0">
                                                 <div className="d-flex justify-content-between align-items-center">
-                                                    <button className="btn btn-sm  shadow btn-outline-primary">
+                                                    <button className="btn btn-sm  shadow btn-outline-primary" data-bs-toggle="tooltip" title='HelpFul'>
                                                         <i className="bx bx-like me-1"></i>
                                                         Helpful
                                                     </button>
-                                                    <button className="btn btn-sm btn-link text-muted p-0">
+                                                    <button className="btn btn-sm btn-link text-muted p-0" data-bs-toggle="tooltip" title='share'>
                                                         <i className="bx bx-share me-1"></i>
                                                         Share
                                                     </button>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import { initTooltip } from '../functions/Tooltip';
 const Hero = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [typedText, setTypedText] = useState('');
@@ -52,6 +52,7 @@ const Hero = () => {
 
 
     useEffect(() => {
+        initTooltip();
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % heroImages.length);
         }, 4000);
@@ -130,13 +131,13 @@ const Hero = () => {
                       
                         <div className="d-flex flex-wrap gap-3" data-aos-duration="1000"  data-aos="fade-up">
                             <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="text-decoration-none" data-aos-delay="1000" data-aos="fade-down">
-                                <button className="btn btn-success shadow-lg d-flex align-items-center btn-lg">
+                                <button className="btn btn-success shadow-lg d-flex align-items-center btn-lg" data-bs-toggle="tooltip" title='Hubungi via WhatsApp'>
                                     <i className="bx bxl-whatsapp fs-5"></i>
                                     Hubungi via WhatsApp
                                 </button>
                             </a>
                             <a href="#harga" className="text-decoration-none">
-                                <button className="btn btn-outline-primary shadow-lg d-flex align-items-center btn-lg" data-aos-delay="900" data-aos="fade-down">
+                                <button className="btn btn-outline-primary shadow-lg d-flex align-items-center btn-lg" data-aos-delay="900" data-aos="fade-down" data-bs-toggle="tooltip" title='Lihat harga'>
                                     <i className="bx bx-money fs-5"></i>
                                     Lihat Harga
                                 </button>

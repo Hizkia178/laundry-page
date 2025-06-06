@@ -1,6 +1,10 @@
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
+import { initTooltip } from '../functions/Tooltip';
 const Harga = () => {
+
+    useEffect(() => {
+        initTooltip();
+    }, []);
     const [hoveredCard, setHoveredCard] = useState(null);
     const [selectedPlan, setSelectedPlan] = useState('monthly');
     const [discountEnabled, setDiscountEnabled] = useState(false);
@@ -267,7 +271,7 @@ const Harga = () => {
                                         </ul>
 
 
-                                        <button className={`btn btn-${plan.popular ? plan.color : `${plan.color}`} w-100 shadow`}>
+                                        <button className={`btn btn-${plan.popular ? plan.color : `${plan.color}`} w-100 shadow`} data-bs-toggle="tooltip" title='Pilih Paket'>
                                             <i className="bx bx-shopping-bag me-2"></i>
                                             {plan.popular ? 'Pilih Sekarang' : 'Pilih Paket'}
                                         </button>
@@ -292,7 +296,7 @@ const Harga = () => {
                                     </p>
                                 </div>
                             </div>
-                            <button type='button' className='btn-close  position-absolute text-muted top-0 end-0 m-2' aria-label='Close' onClick={(e) => e.currentTarget.parentElement.style.display = 'none'} style={{width: '0.5rem', height: '0.5rem'}}>
+                            <button type='button' className='btn-close  position-absolute text-muted top-0 end-0 m-2' aria-label='Close' onClick={(e) => e.currentTarget.parentElement.style.display = 'none'} style={{ width: '0.5rem', height: '0.5rem' }}>
 
                             </button>
                         </div>

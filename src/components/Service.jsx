@@ -1,8 +1,11 @@
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
+import { initTooltip } from '../functions/Tooltip';
 const Service = () => {
-    const [hoveredCard, setHoveredCard] = useState(null);
 
+    useEffect(() => {
+        initTooltip();
+    }, []);
+    const [hoveredCard, setHoveredCard] = useState(null);
     const services = [
         {
             id: 1,
@@ -66,11 +69,11 @@ const Service = () => {
         }
     ];
 
-   
+
     return (
         <section className="py-5 bg-light" id="services">
             <div className="container">
-    
+
                 <div className="text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
                     <span className="badge bg-primary mb-3 shadow rounded-pill px-4 py-2 fs-6">
                         <i className="bx bx-crown me-2"></i>
@@ -80,33 +83,32 @@ const Service = () => {
                         Layanan Laundry Kami
                     </h2>
                     <p className="lead text-muted col-lg-8 mx-auto">
-                        Kami menyediakan berbagai layanan laundry berkualitas tinggi dengan teknologi modern 
+                        Kami menyediakan berbagai layanan laundry berkualitas tinggi dengan teknologi modern
                         dan pelayanan terbaik untuk memenuhi semua kebutuhan Anda.
                     </p>
                 </div>
 
-          
+
                 <div className="row g-4 mb-5" data-aos-duration="1000" data-aos="fade-up">
                     {services.map((service, index) => (
-                        <div key={service.id} className="col-12 col-md-6 col-lg-4" 
-                             data-aos="fade-up" 
-                             data-aos-delay={index * 100}>
-                            <div 
-                                className={`card h-100 border-0 shadow ${
-                                    hoveredCard === service.id ? 'shadow' : 'shadow'
-                                }`} data-aos-duration="1000"
-                                style={{ 
+                        <div key={service.id} className="col-12 col-md-6 col-lg-4"
+                            data-aos="fade-up"
+                            data-aos-delay={index * 100}>
+                            <div
+                                className={`card h-100 border-0 shadow ${hoveredCard === service.id ? 'shadow' : 'shadow'
+                                    }`} data-aos-duration="1000"
+                                style={{
                                     transition: 'all 0.3s ease',
                                     transform: hoveredCard === service.id ? 'translateY(-5px)' : 'translateY(0)'
                                 }}
                                 onMouseEnter={() => setHoveredCard(service.id)}
                                 onMouseLeave={() => setHoveredCard(null)}
                             >
-                             
+
                                 <div className={`bg-${service.color}`} style={{ height: '10px' }}></div>
-                                
+
                                 <div className="card-body p-4">
-                                   
+
                                     <div className="d-flex align-items-center mb-3">
                                         <div className={`bg-${service.color} bg-opacity-10 rounded-circle p-3 me-3 shadow`}>
                                             <i className={`bx ${service.icon} fs-3 text-${service.color}`}></i>
@@ -119,10 +121,10 @@ const Service = () => {
                                         </div>
                                     </div>
 
-                                
+
                                     <p className="text-muted mb-3">{service.description}</p>
 
-                                
+
                                     <ul className="list-unstyled mb-3">
                                         {service.features.map((feature, idx) => (
                                             <li key={idx} className="small text-muted mb-1">
@@ -132,12 +134,12 @@ const Service = () => {
                                         ))}
                                     </ul>
 
-                                    
+
                                     <div className="d-flex justify-content-between align-items-center">
                                         <span className={`h6 fw-bold text-${service.color} mb-0`}>
                                             {service.price}
                                         </span>
-                                        <button className={`btn btn-outline-${service.color} btn-sm shadow`}>
+                                        <button className={`btn btn-outline-${service.color} btn-sm shadow`} data-bs-toggle="tooltip" title='Pilih Layanan'>
                                             <i className="bx bx-check-circle me-1"></i>
                                             Pilih Layanan
                                         </button>
