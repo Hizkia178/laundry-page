@@ -281,7 +281,7 @@ const Contact = () => {
                                                 <h5 className="fw-bold mb-2">{info.title}</h5>
                                                 <p className="mb-1 text-dark">{info.info}</p>
                                                 <small className="text-muted d-block mb-3">{info.subInfo}</small>
-                                                <button className="btn btn-sm btn-outline-primary shadow">
+                                                <button className="btn btn-sm btn-outline-primary shadow" data-bs-toggle="tooltip" title={info.action}>
                                                     <i className={`bx ${info.actionIcon} me-1`}></i>
                                                     {info.action}
                                                 </button>
@@ -534,6 +534,8 @@ const Contact = () => {
                                                 <input
                                                     className="form-check-input"
                                                     type="checkbox"
+                                                    data-bs-toggle="tooltip"
+                                                    title='Anda harus menchecklist untuk mendapatkan newsletter dari kami'
                                                     name="newsletter"
                                                     checked={formData.newsletter}
                                                     onChange={handleInputChange}
@@ -552,6 +554,8 @@ const Contact = () => {
                                                 type="submit"
                                                 disabled={isSubmitting}
                                                 className="btn btn-primary btn-lg w-100 shadow"
+                                                data-bs-toggle="tooltip"
+                                                title='Kirim pesan ke kami'
                                                 style={{ transition: 'all 0.3s ease' }}
                                             >
                                                 {isSubmitting ? (
