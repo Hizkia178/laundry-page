@@ -135,7 +135,7 @@ const Hero = () => {
                                     Hubungi via WhatsApp
                                 </button>
                             </a>
-                            <a href="#pricing" className="text-decoration-none">
+                            <a href="#harga" className="text-decoration-none">
                                 <button className="btn btn-outline-primary shadow-lg d-flex align-items-center btn-lg" data-aos-delay="900" data-aos="fade-down">
                                     <i className="bx bx-money fs-5"></i>
                                     Lihat Harga

@@ -166,7 +166,7 @@ const Harga = () => {
                                     <label className="btn btn-outline-primary position-relative" htmlFor="semester">
                                         <i className="bx bx-calendar-alt me-2"></i>6 Bulan
                                         {discountEnabled && (
-                                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                                            <span className="position-absolute top-0 start-100 translate-middle z-3 badge rounded-pill bg-success">
                                                 -15%
                                             </span>
                                         )}
